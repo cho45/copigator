@@ -1,0 +1,42 @@
+{
+  "global": {
+    "destinationBase": "./test-output",
+    "dateFormat": "YYYY\\MM",
+    "duplicateHandling": "skip",
+    "verifyHash": true
+  },
+  "deviceRules": [
+    {
+      "name": "Canon_EOS_R6",
+      "detection": {
+        "volumeNames": ["EOS_DIGITAL"],
+        "folderIndicators": ["DCIM/100EOSR6"]
+      },
+      "source": {
+        "basePath": "./test-data/eos-r6",
+        "folders": ["DCIM/100EOSR6"],
+        "recursive": true
+      },
+      "files": {
+        "extensions": [".cr3", ".mp4", ".mov"],
+        "sidecarRules": [
+          {
+            "primaryExtension": ".cr3",
+            "excludeExtensions": [".jpg", ".jpeg"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ZOOM_Recorder",
+      "source": {
+        "basePath": "./test-data/zoom-h4e",
+        "folders": ["STEREO"],
+        "recursive": true
+      },
+      "files": {
+        "extensions": [".wav", ".mp3", ".flac"]
+      }
+    }
+  ]
+}
