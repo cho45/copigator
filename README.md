@@ -287,4 +287,4 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## ライセンス
 
-MIT License
+MIT: https://cho45.github.io/mit-license
